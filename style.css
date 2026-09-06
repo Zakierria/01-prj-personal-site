@@ -1,1 +1,339 @@
-/* Add you CSS here */
+/* These variables make the main colors easy to change. */
+:root {
+	--ink: #40364f;
+	--blue: #6879a8;
+	--sky: #d8e8df;
+	--cream: #fff4df;
+	--orange: #e5a06d;
+	--berry: #ba7891;
+	--pine: #586a82;
+	--pixel-shadow: #c4afc5;
+	--white: #ffffff;
+}
+
+/* This makes sizing easier to understand on the whole page. */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	color: var(--ink);
+	background: var(--cream);
+	font-family: 'Courier New', Courier, monospace;
+	line-height: 1.6;
+	background-image: repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(186, 120, 145, 0.08) 32px);
+}
+
+a {
+	color: inherit;
+}
+
+header {
+	background: var(--cream);
+	border-bottom: 4px solid var(--pixel-shadow);
+}
+
+.navigation {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 22px 24px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	color: var(--blue);
+	font-size: 1.05rem;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nav-links a {
+	margin-left: 24px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.project-card a:hover {
+	color: var(--berry);
+}
+
+.hero {
+	max-width: 1100px;
+	min-height: 560px;
+	margin: 0 auto;
+	padding: 80px 24px;
+	display: flex;
+	align-items: center;
+	gap: 60px;
+}
+
+.hero-text {
+	flex: 1;
+}
+
+.hero-image {
+	width: 44%;
+	height: 390px;
+	object-fit: cover;
+	border: 8px solid var(--white);
+	box-shadow: 10px 10px 0 var(--pixel-shadow);
+}
+
+.eyebrow {
+	margin: 0 0 12px;
+	color: var(--berry);
+	font-size: 0.75rem;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+h1 {
+	max-width: 600px;
+	margin-bottom: 22px;
+	font-size: 3.5rem;
+	line-height: 1.05;
+	text-shadow: 4px 4px 0 #ead1d5;
+}
+
+h2 {
+	margin-bottom: 28px;
+	font-size: 2.5rem;
+	line-height: 1.1;
+}
+
+.intro {
+	max-width: 480px;
+	margin-bottom: 30px;
+	color: #686078;
+	font-size: 1.15rem;
+}
+
+.button {
+	display: inline-block;
+	padding: 13px 22px;
+	color: var(--white);
+	background: var(--blue);
+	font-size: 0.85rem;
+	font-weight: bold;
+	text-decoration: none;
+	border: 3px solid var(--ink);
+	box-shadow: 5px 5px 0 var(--ink);
+}
+
+.button:hover {
+	background: var(--orange);
+	box-shadow: 2px 2px 0 var(--ink);
+	transform: translate(3px, 3px);
+}
+
+.button-note {
+	margin: 14px 0 0 8px;
+	color: var(--berry);
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+
+.section {
+	padding: 80px 24px;
+}
+
+.about-section {
+	background: var(--sky);
+	border-top: 4px dashed var(--blue);
+	border-bottom: 4px dashed var(--blue);
+}
+
+.section-heading,
+.about-content,
+.skills-section > *,
+.projects-section > * {
+	max-width: 1100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.about-content {
+	display: flex;
+	align-items: center;
+	gap: 45px;
+}
+
+.about-content img {
+	width: 170px;
+	height: 170px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 6px solid var(--white);
+	box-shadow: 6px 6px 0 var(--pixel-shadow);
+}
+
+.about-content p {
+	max-width: 560px;
+	margin-bottom: 0;
+	font-size: 1.2rem;
+}
+
+.skills-section,
+.projects-section {
+	background: var(--cream);
+}
+
+.skills-list,
+.project-list {
+	display: flex;
+	gap: 22px;
+}
+
+.skill,
+.project-card {
+	flex: 1;
+	padding: 26px;
+	background: #fffaf0;
+	border: 3px solid var(--pixel-shadow);
+	box-shadow: 6px 6px 0 var(--sky);
+}
+
+.skill h3,
+.project-card h3 {
+	margin-bottom: 8px;
+	font-size: 1.3rem;
+}
+
+.skill p,
+.project-card p {
+	margin-bottom: 0;
+	color: #686078;
+}
+
+.project-card {
+	min-height: 250px;
+	border-top: 8px solid var(--berry);
+}
+
+.project-number {
+	margin-bottom: 25px;
+	color: var(--orange);
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.project-card a {
+	display: inline-block;
+	margin-top: 22px;
+	color: var(--blue);
+	font-size: 0.85rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.contact-section {
+	color: var(--white);
+	background: var(--pine);
+	border-top: 4px solid var(--orange);
+	text-align: center;
+}
+
+.contact-section h2 {
+	margin-bottom: 16px;
+}
+
+.contact-section > p:not(.eyebrow) {
+	margin-bottom: 28px;
+}
+
+.light-button {
+	color: var(--ink);
+	background: var(--white);
+}
+
+.social-links {
+	margin-top: 28px;
+}
+
+.social-links a {
+	margin: 0 8px;
+	color: var(--white);
+	font-size: 0.85rem;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 2px solid var(--orange);
+}
+
+.social-links a:hover {
+	color: var(--orange);
+}
+
+footer {
+	padding: 22px 24px;
+	color: var(--white);
+	background: #40364f;
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+footer p {
+	margin-bottom: 0;
+}
+
+/* On smaller screens, stack the content so it remains easy to read. */
+@media (max-width: 700px) {
+	.navigation,
+	.hero,
+	.about-content,
+	.skills-list,
+	.project-list {
+		display: block;
+	}
+
+	.nav-links {
+		margin-top: 14px;
+	}
+
+	.nav-links a {
+		display: inline-block;
+		margin: 0 14px 6px 0;
+	}
+
+	.hero {
+		padding-top: 55px;
+		padding-bottom: 55px;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	.hero-image {
+		width: 100%;
+		height: 260px;
+		margin-top: 45px;
+	}
+
+	.about-content img {
+		margin-bottom: 24px;
+	}
+
+	.skill,
+	.project-card {
+		margin-bottom: 18px;
+	}
+}
