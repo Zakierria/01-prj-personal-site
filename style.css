@@ -203,6 +203,14 @@ h2 {
 	gap: 22px;
 }
 
+.skills-list {
+	flex-wrap: wrap;
+}
+
+.project-list {
+	flex-wrap: wrap;
+}
+
 .skill,
 .project-card {
 	flex: 1;
@@ -210,6 +218,15 @@ h2 {
 	background: #fffaf0;
 	border: 3px solid var(--pixel-shadow);
 	box-shadow: 6px 6px 0 var(--sky);
+}
+
+.skill {
+	flex: 1 1 20%;
+	transition: transform 0.2s ease;
+}
+
+.skill:hover {
+	transform: scale(1.05);
 }
 
 .skill h3,
@@ -225,8 +242,15 @@ h2 {
 }
 
 .project-card {
+	flex: 1 1 30%;
 	min-height: 250px;
 	border-top: 8px solid var(--berry);
+}
+
+.project-date {
+	margin-bottom: 12px;
+	color: var(--berry);
+	font-weight: bold;
 }
 
 .project-number {
