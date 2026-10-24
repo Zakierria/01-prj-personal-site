@@ -247,6 +247,15 @@ h2 {
 	border-top: 8px solid var(--berry);
 }
 
+.project-details {
+	display: none;
+}
+
+.project-card:hover .project-details,
+.project-card:focus .project-details {
+	display: block;
+}
+
 .project-date {
 	margin-bottom: 12px;
 	color: var(--berry);
@@ -359,5 +368,9 @@ footer p {
 	.skill,
 	.project-card {
 		margin-bottom: 18px;
+	}
+
+	.project-details {
+		display: block;
 	}
 }
